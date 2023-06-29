@@ -17,10 +17,10 @@ if (!empty($_POST["btningresar"])) {
 
         if ($result) {
             // Usuario encontrado
-           $_SESSION["id"]=$result->id; //almaceno en una variable id el id del usuario
-           $_SESSION["correo"]=$result->correo;
-           $_SESSION["nombre"]=$result->nombre;
-           $_SESSION["cargo"]=$result->cargo;    
+            $_SESSION["id"] = $result['id'];
+            $_SESSION["correo"] = $result['correo'];
+            $_SESSION["nombre"] = $result['nombre'];
+            $_SESSION["cargo"] = $result['cargo'];
             header("location:../index.php");
             exit();
         } else {
